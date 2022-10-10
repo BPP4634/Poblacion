@@ -81,9 +81,7 @@ def filtra_por_pais(poblaciones, pais):
 def filtra_por_paises_y_anyo(poblaciones, anyo, paises):
     panafil = []
     for poblacion in poblaciones:
-        if poblacion.año == anyo:
-            for pais in paises:
-                if poblacion.nombre == pais:
+        if poblacion.año == anyo and poblacion.nombre in paises:
                     panafil.append((poblacion.nombre,poblacion.censo))
     return panafil
 ##############################################################################################
